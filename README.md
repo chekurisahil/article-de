@@ -7,7 +7,7 @@ This program can be enhanced to extract other information.
 
 ## How It Works
 
-This program is written in Python. It starts by finding the positions of the word counts of the articles in the TXT file and generates a list of all the articles. The list is iterated over and individual pieces of information for each article are gathered into a list. Once the list is complete, it is written into an Excel file.
+This program is written in Python. It starts by finding the word count of each article and generates a list of all the articles. The list of articles is iterated over and the information for each article is gathered into a list. Each list is then written into an Excel file.
 
 ## Technical Details
 
