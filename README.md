@@ -1,28 +1,25 @@
 # Article Data Extraction
-
 <img src='https://img.shields.io/badge/Python-3776AB?style=plastic&logo=python&logoColor=white'> <img src='https://img.shields.io/badge/Excel-217346?style=plastic&logo=microsoft-excel&logoColor=white'> 
 
 This program saves time for researchers looking for information about articles. It reads through all the articles in a TXT file and outputs the headline, word count, news date, and source into an Excel file with the same name.
 
 This program can be enhanced to extract other information.
 
-
 ## How It Works
 
-This program is written in Python. It starts by finding the positions of the articles in the TXT file and generates a list of all the articles. The list is iterated over and individual pieces of information for each article is gathered into a list. Once the list is complete, it is written to an Excel file.
+This program is written in Python. It starts by finding the positions of the articles in the TXT file and generates a list of all the articles. The list is iterated over and individual pieces of information for each article is gathered into a list. Once the list is complete, it is written into an Excel file.
 
-Technical details below:
-// html file
+## Technical Details
 
+This program uses the **os**, **pandas**, **re**, **datetime**, and **difflib** packages. If you don't have these packages, use the pip install command to install them.
 
-This module requires the following modules:
-- [Bad judgement](https://www.drupal.org/project/bad_judgement)
+To use this program, clone the GitHub repository and once you have all the TXT files in the data/txt directory, execute the command:
+```
+python3 main.py
+```
+Once the command finishes, go to the output directory, and all the Excel files should be there.
 
-OR
-
-This module requires no modules outside of Drupal core.
-
-## Documentation
+## Reference
 
 ### MODULE: article.py
 
@@ -45,7 +42,6 @@ This module also has primary functions that either set the above attributes or h
 | `similarity()` | Compares 2 strings and returns a similarity score between 0 and 1 | 
 | `get_article_titles()` | Returns a list of article titles  `id`, `file`, and `words_pos` |
 
-
 ### MODULE: my_functions.py
 
 This module contains functions that are used to get information about the Article objects:
@@ -54,19 +50,8 @@ This module contains functions that are used to get information about the Articl
 | --------- | ----------- | 
 | `get_words_pos()` | Returns a list of every position a word count appears |
 | `get_article_list()` | Creates an Article object for every word count position and returns a list of the Article objects |
-| `get_article_data()` | Gets values from Article object, writes it to a Pandas DataFrame() and returns the DataFrame() object |
+| `get_article_data()` | Gets values from the Article object, writes it to a Pandas DataFrame() and returns the DataFrame() object |
 
+## Support
 
-
-
-
-
-## Installation (required, unless a separate INSTALL.md is provided)
-
-Install as you would normally install a contributed Drupal module. For further information, see [Installing Drupal Modules](https://www.drupal.org/docs/extending-drupal/installing-drupal-modules).
-
-
-## Configuration (required)
-
-1. Enable the module at Administration > Extend.
-1. Profit.
+In case you have questions, please reach out to Sahil Chekuri at schekur1@uci.edu.
